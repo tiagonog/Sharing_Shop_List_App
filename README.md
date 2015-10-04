@@ -5,3 +5,6 @@ This project is tracked using [Trello](https://trello.com/b/OFWseW7G)
 
 * Contributors:
   * [Joao Farias](https://github.com/JoaoGFarias) 
+  * [Victor Nascimento] (https://github.com/vhsnasc)
+  * [Tiago Nogueira] (https://github.com/tiagonog)
+  * [Iago de Sa] (https://github.com/icfs)
