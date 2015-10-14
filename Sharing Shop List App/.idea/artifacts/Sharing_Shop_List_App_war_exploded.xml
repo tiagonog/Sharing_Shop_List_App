@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Sharing Shop List App:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sharing_Shop_List_App_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Sharing Shop List App/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Sharing Shop List App" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
