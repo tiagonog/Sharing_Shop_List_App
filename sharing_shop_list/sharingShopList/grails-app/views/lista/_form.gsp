@@ -14,9 +14,7 @@
 <div class="fieldcontain ${hasErrors(bean: listaInstance, field: 'produtos', 'error')} ">
 	<label for="produtos">
 		<g:message code="lista.produtos.label" default="Produtos" />
-		
 	</label>
 	<g:select name="produtos" from="${sharingshoplist.Produto.list()}" multiple="multiple" optionKey="id" size="5" value="${listaInstance?.produtos*.id}" class="many-to-many"/>
 
 </div>
-

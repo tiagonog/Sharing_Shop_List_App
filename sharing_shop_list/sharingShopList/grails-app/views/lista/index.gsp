@@ -16,7 +16,7 @@
 			</ul>
 		</div>
 		<div id="list-lista" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="default.list.lista.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -25,15 +25,12 @@
 					<tr>
 
 						<g:sortableColumn property="name" title="${message(code: 'lista.name.label', default: 'Nome')}" />
-
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${listaInstanceList}" status="i" var="listaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-
 						<td><g:link action="show" id="${listaInstance.id}">${fieldValue(bean: listaInstance, field: "name")}</g:link></td>
-
 					</tr>
 				</g:each>
 				</tbody>
