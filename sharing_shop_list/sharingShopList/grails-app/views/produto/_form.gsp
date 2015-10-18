@@ -1,6 +1,13 @@
 <%@ page import="sharingshoplist.Produto" %>
 
+<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'nome', 'error')} required">
+	<label for="nome">
+		<g:message code="produto.nome.label" default="Nome" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="nome" required="" value="${produtoInstance?.nome}"/>
 
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'preco', 'error')} required">
 	<label for="preco">
@@ -8,15 +15,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="preco" value="${fieldValue(bean: produtoInstance, field: 'preco')}" required=""/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'nome', 'error')} required">
-	<label for="nome">
-		<g:message code="produto.nome.label" default="Nome" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="nome" required="" value="${produtoInstance?.nome}"/>
 
 </div>
 
@@ -55,4 +53,3 @@
 	<g:textField name="status" required="" value="${produtoInstance?.status}"/>
 
 </div>
-
