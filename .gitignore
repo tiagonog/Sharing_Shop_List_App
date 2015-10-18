@@ -31,3 +31,6 @@
 
 # "temporary" build files
 /target
+
+"/Sharing Shop List App"
+/sharing_shop_list/target/*
