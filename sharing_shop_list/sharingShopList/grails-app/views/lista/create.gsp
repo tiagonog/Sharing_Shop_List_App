@@ -27,7 +27,7 @@
 			</g:hasErrors>
 			<g:form url="[resource:listaInstance, action:'save']" >
 				<fieldset class="form">
-					<g:render template="form"/>
+					<g:render template="createContent"/>
 				</fieldset>
 				<fieldset class="buttons">
 					<g:submitButton name="create" class="save" value="${message(code: 'lista.button.create.label', default: 'Create')}" />

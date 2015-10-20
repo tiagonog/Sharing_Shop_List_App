@@ -63,7 +63,7 @@ class ListaController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'lista.created.message', args: [message(code: 'lista.label', default: 'Lista'), listaInstance.name])
-                redirect listaInstance
+                  redirect(action: "index")
             }
             '*' { respond listaInstance, [status: CREATED] }
         }
