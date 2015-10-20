@@ -9,7 +9,7 @@ class Lista {
     String toString(){ "$name" }
 
     static constraints = {
-      id(blank: false)
+      id(blank: false, unique: true)
       name(blank: false)
     }
 }
