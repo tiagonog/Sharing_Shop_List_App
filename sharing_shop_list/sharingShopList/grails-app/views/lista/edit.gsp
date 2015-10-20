@@ -11,8 +11,8 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="index"><g:message code="lista.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="lista.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="edit-lista" class="content scaffold-edit" role="main">
@@ -33,7 +33,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.lista.update.label', default: 'Update')}" />
+					<g:actionSubmit class="save" action="update" controller="AdicionarProdutosController" value="${message(code: 'lista.button.update.label', default: 'Update')}" />
 				</fieldset>
 			</g:form>
 		</div>

@@ -11,10 +11,9 @@ class Produto {
 
     String toString(){ "$nome" }
 
-
     static constraints = {
       preco(blank: false)
-      nome(blank: false)
+      nome(blank: false, unique: "categoria")
       marca(blank: false)
     }
 }
