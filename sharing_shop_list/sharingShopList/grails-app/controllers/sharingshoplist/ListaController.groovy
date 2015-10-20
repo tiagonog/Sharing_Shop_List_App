@@ -24,33 +24,6 @@ class ListaController {
     }
 
     @Transactional
-    def save(Lista listaInstance) {
-        if (listaInstance == null) {
-            notFound()
-            return
-        }
-
-        if (listaInstance.hasErrors()) {
-            respond listaInstance.errors, view:'create'
-            return
-        }
-
-        listaInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'lista.label', default: 'Lista'), listaInstance.id])
-                redirect listaInstance
-            }
-            '*' { respond listaInstance, [status: CREATED] }
-        }
-    }
-
-    def edit(Lista listaInstance) {
-        respond listaInstance
-    }
-
-    @Transactional
     def update(Lista listaInstance) {
         if (listaInstance == null) {
             notFound()
@@ -66,11 +39,38 @@ class ListaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Lista.label', default: 'Lista'), listaInstance.id])
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Lista.label', default: 'Nome'), listaInstance.name])
                 redirect listaInstance
             }
             '*'{ respond listaInstance, [status: OK] }
         }
+    }
+
+    @Transactional
+    def save(Lista listaInstance) {
+        if (listaInstance == null) {
+            notFound()
+            return
+        }
+
+        if (listaInstance.hasErrors()) {
+            respond listaInstance.errors, view:'create'
+            return
+        }
+
+        listaInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'lista.created.message', args: [message(code: 'lista.label', default: 'Lista'), listaInstance.name])
+                redirect listaInstance
+            }
+            '*' { respond listaInstance, [status: CREATED] }
+        }
+    }
+
+    def edit(Lista listaInstance) {
+        respond listaInstance
     }
 
     @Transactional
@@ -85,7 +85,7 @@ class ListaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Lista.label', default: 'Lista'), listaInstance.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Lista.label', default: 'Lista'), listaInstance.name])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -95,7 +95,7 @@ class ListaController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'lista.label', default: 'Lista'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'lista.label', default: 'Lista'), params.name])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

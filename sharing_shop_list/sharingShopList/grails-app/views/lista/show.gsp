@@ -12,8 +12,8 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.lista.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.lista.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="index"><g:message code="lista.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="lista.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-lista" class="content scaffold-show" role="main">
@@ -46,8 +46,8 @@
 			</ol>
 			<g:form url="[resource:listaInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${listaInstance}"><g:message code="default.lista.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.lista.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					<g:link class="edit" action="edit" resource="${listaInstance}"><g:message code="lista.button.edit.label" default="Edit" /></g:link>
+					<g:actionSubmit class="delete" action="delete" value="${message(code: 'lista.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
 		</div>
