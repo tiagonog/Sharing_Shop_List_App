@@ -5,7 +5,8 @@ class Lista {
     int id;
     String name;
 
-    static hasMany = [produtos: Produto];
+    static hasMany = [produtos: Produto, usuarios: Usuario];
+    static belongsTo = Usuario
     String toString(){ "$name" }
 
     static constraints = {

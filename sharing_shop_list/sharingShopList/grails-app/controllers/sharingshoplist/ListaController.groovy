@@ -58,7 +58,7 @@ class ListaController {
             return
         }
 
-        listaInstance.save flush:true
+        listaInstance.save flush: true
 
         request.withFormat {
             form multipartForm {

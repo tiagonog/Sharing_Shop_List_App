@@ -16,6 +16,15 @@
 		<g:message code="lista.produtos.label" default="Produtos" />
 
 	</label>
-	<g:select name="produtos" from="${sharingshoplist.Produto.list()}" multiple="multiple" optionKey="id" size="5" value="${listaInstance?.produtos*.id}" class="many-to-many"/>
+	<g:select name="produtos" from="${sharingshoplist.Produto.list()}" multiple="multiple" optionKey="id" size="5" value="${listaInstance?.produtos*.nome}" class="many-to-many"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: listaInstance, field: 'usuario', 'error')} ">
+	<label for="usuario">
+		<g:message code="usarios.produtos.label" default="Usuarios" />
+
+	</label>
+	<g:select name="usuarios" from="${sharingshoplist.Usuario.list()}" multiple="multiple" optionKey="id" size="5" value="${listaInstance?.usuarios*.email}" class="many-to-many"/>
 
 </div>

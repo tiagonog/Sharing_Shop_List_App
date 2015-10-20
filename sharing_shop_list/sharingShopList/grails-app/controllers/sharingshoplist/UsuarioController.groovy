@@ -50,6 +50,10 @@ class UsuarioController {
         respond usuarioInstance
     }
 
+    public static void addLista(usuario, Lista listaInstance) {
+        Usuario.findByEmail(usuario).listas.push(listaInstance)
+    }
+
     @Transactional
     def update(Usuario usuarioInstance) {
         if (usuarioInstance == null) {
