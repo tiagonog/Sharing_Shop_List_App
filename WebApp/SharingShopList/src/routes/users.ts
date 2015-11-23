@@ -1,4 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
 import express = require('express');
 import Usuario = require('../models/entidades/Usuario');
 var router = express.Router();
