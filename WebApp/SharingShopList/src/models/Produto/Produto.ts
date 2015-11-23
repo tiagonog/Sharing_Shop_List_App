@@ -1,3 +1,4 @@
+
 class Produto{
 	private status : string;
 	private categoria : string;

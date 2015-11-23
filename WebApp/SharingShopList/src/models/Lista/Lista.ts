@@ -33,5 +33,4 @@ class Lista{
 	
 	
 }
-
 export = Lista;

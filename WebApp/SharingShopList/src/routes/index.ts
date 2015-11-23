@@ -1,9 +1,11 @@
 import express = require('express');
+import Lista = require('../models/Lista/Lista');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  Lista lista = new Lista("Lista de compras APS");
+  res.render('index', { title: lista.toString()});
 });
 
 export = router;
