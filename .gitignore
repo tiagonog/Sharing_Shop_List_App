@@ -34,3 +34,6 @@
 
 "/Sharing Shop List App"
 /sharing_shop_list/target/*
+/WebApp/SharingShopList/node_modules/*
+/WebApp/SharingShopList/typings/*
+/WebApp/SharingShopList/build/*
