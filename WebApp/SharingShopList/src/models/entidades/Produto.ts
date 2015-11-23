@@ -1,4 +1,3 @@
-
 class Produto{
 	private status : string;
 	private categoria : string;
@@ -17,7 +16,7 @@ class Produto{
 	}
 	
 	public getStatus(){
-		return status;
+		return this.status;
 	}
 	public setStatus(status : string){
 		this.status = status;

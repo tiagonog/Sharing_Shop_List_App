@@ -1,0 +1,4 @@
+class ControladorCadastroUsuario{
+	
+}
+export = ControladorCadastroUsuario;

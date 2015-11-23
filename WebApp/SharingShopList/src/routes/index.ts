@@ -1,5 +1,5 @@
 import express = require('express');
-import Lista = require('../models/Lista/Lista');
+import Lista = require('../models/entidades/Lista');
 var router = express.Router();
 
 /* GET home page. */
