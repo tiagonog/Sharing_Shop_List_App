@@ -1,0 +1,4 @@
+class ControaladorCompartilhamento{
+	
+}
+export = ControaladorCompartilhamento;
