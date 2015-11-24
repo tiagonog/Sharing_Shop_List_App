@@ -1,0 +1,4 @@
+class Fachada{
+	
+}
+export = Fachada;
