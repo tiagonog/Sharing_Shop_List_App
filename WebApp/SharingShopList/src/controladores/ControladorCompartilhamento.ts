@@ -35,6 +35,13 @@ class ControaladorCompartilhamento{
 	public getListas(idUsuario:number){
 		return this.cadastroUsuario.getUsuarioById(idUsuario).getListas();
 	}
+	public editarLista(lista:Lista){
+		this.cadastroLista.save(lista);
+	}
+	constructor(cadastroLista: CadastroLista,cadastroUsuario : CadastroUsuario){
+		this.cadastroLista = cadastroLista;
+		this.cadastroUsuario = cadastroUsuario;
+	}
 	
 	
 }

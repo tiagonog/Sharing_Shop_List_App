@@ -12,6 +12,9 @@ class CadastroLista{
 	public getUsersFromLista(idLista:number){
 		return this.getListaById(idLista).getCompartilhamentoLista();
 	}
+	constructor(repositorioLista : IRepositorioLista){
+		this.repositorioLista = repositorioLista;
+	}
 
 }
 export = CadastroLista;

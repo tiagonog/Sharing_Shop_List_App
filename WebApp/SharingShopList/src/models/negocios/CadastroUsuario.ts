@@ -15,5 +15,8 @@ class CadastroUsuario{
 	public getUsuarioByEmail(email:string){
 		return this.repositorioUsuario.getUsuarioByEmail(email);
 	}
+	constructor(repositorioUsuario : IRepositorioUsuario){
+		this.repositorioUsuario = repositorioUsuario;
+	}
 }
 export = CadastroUsuario;
