@@ -1,4 +1,5 @@
 import IRepositorioUsuario = require('../IRepositorio/IRepositorioUsuario');
+import MRepositorioUsuario = require('../Repositorio/MRepositorioUsuario');
 import Usuario = require('../entidades/Usuario');
 class CadastroUsuario{
 	private repositorioUsuario : IRepositorioUsuario;
@@ -15,8 +16,8 @@ class CadastroUsuario{
 	public getUsuarioByEmail(email:string){
 		return this.repositorioUsuario.getUsuarioByEmail(email);
 	}
-	constructor(repositorioUsuario : IRepositorioUsuario){
-		this.repositorioUsuario = repositorioUsuario;
+	constructor(){
+		this.repositorioUsuario = new MRepositorioUsuario();
 	}
 }
 export = CadastroUsuario;

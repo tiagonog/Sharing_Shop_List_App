@@ -1,4 +1,5 @@
 import IRepositorioLista = require('../IRepositorio/IRepositorioLista');
+import MRepositorioLista = require('../Repositorio/MRepositorioLista');
 import Lista = require('../entidades/Lista');
 class CadastroLista{
 	private repositorioLista : IRepositorioLista;
@@ -12,8 +13,8 @@ class CadastroLista{
 	public getUsersFromLista(idLista:number){
 		return this.getListaById(idLista).getCompartilhamentoLista();
 	}
-	constructor(repositorioLista : IRepositorioLista){
-		this.repositorioLista = repositorioLista;
+	constructor(){
+		this.repositorioLista = new MRepositorioLista();
 	}
 
 }
