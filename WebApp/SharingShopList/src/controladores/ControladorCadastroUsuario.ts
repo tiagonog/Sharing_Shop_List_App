@@ -1,4 +1,0 @@
-class ControladorCadastroUsuario{
-	
-}
-export = ControladorCadastroUsuario;

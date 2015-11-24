@@ -1,4 +1,0 @@
-class ControladorLista{
-	
-}
-export = ControladorLista;

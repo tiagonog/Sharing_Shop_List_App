@@ -52,6 +52,9 @@ class Lista implements IListaModificacaoObservable{
 			}
 		});
 	}
+	public getCompartilhamentoLista(){
+		return this.compartilhamentosLista;
+	}
 	
 	
 	public toString() : string{
