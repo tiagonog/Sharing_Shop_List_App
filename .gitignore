@@ -37,3 +37,4 @@
 /WebApp/SharingShopList/node_modules/*
 /WebApp/SharingShopList/typings/*
 /WebApp/SharingShopList/build/*
+/WebApp/SharingShopList/src/routes/index.ts
